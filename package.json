@@ -4,9 +4,10 @@
   "description": "1. Ouvre **Git Bash** (clic droit dans le dossier → \"Git Bash Here\", ou cherche Git Bash dans le menu Démarrer)\r 2. Navigue dans ton projet :\r ```bash\r cd D:/claude_projects/nom-du-repo\r ```\r 3. Récupère les dernières modifications depuis GitHub :\r ```bash\r git pull\r ```",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -15,18 +16,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/BlackOurs18/site_chef_doeuvre/issues"
   },
   "homepage": "https://github.com/BlackOurs18/site_chef_doeuvre#readme",
   "dependencies": {
     "framer-motion": "^12.38.0",
+    "next": "^16.2.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^6.0.1",
-    "vite": "^8.0.10"
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
   }
 }
