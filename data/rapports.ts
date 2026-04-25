@@ -4,10 +4,13 @@ export interface RapportSection {
   content: string
 }
 
-export interface Mission {
+export interface VeilleItem {
+  id: string
+  category: string
   title: string
-  description: string
-  tools: string[]
+  source: string
+  summary: string
+  impact: string
 }
 
 export const rapportLancement: RapportSection[] = [
@@ -106,7 +109,7 @@ export const rapportFinal: RapportSection[] = [
   },
 ]
 
-export const veilleItems = [
+export const veilleItems: VeilleItem[] = [
   {
     id: 'ecommerce-parfum',
     category: 'E-commerce parfum',
