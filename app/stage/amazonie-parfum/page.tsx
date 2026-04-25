@@ -23,6 +23,7 @@ export default function AmazoniePage() {
         <SectionTitle
           title={stage.organization}
           subtitle={`Stage principal du Chef-d'œuvre · ${stage.role} · ${stage.location}`}
+          level="h1"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

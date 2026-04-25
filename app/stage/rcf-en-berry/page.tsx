@@ -22,6 +22,7 @@ export default function RCFPage() {
         <SectionTitle
           title={stage.organization}
           subtitle={`${stage.role} · ${stage.duration} · ${stage.location}`}
+          level="h1"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

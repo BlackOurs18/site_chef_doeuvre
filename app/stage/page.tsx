@@ -17,6 +17,7 @@ export default function StagePage() {
         <SectionTitle
           title="Mes Stages"
           subtitle="Cette section regroupe mes deux expériences de stage réalisées dans le cadre du DEUST Webmaster. Elle constitue le cœur du Chef-d'œuvre."
+          level="h1"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">

@@ -38,6 +38,7 @@ export default function ProfilPage() {
         <SectionTitle
           title="Mon Profil"
           subtitle="Étudiant en DEUST Webmaster, passionné par le web, le design et la communication digitale."
+          level="h1"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">

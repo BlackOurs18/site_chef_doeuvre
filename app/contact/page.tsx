@@ -16,6 +16,7 @@ export default function ContactPage() {
         <SectionTitle
           title="Contact"
           subtitle="Vous souhaitez échanger sur mon parcours ou mes projets ? N'hésitez pas à me contacter."
+          level="h1"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">

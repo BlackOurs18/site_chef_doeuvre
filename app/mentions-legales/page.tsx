@@ -13,7 +13,7 @@ export default function MentionsLegalesPage() {
   return (
     <Container className="py-16 max-w-3xl">
       <MotionSection>
-        <SectionTitle title="Mentions légales" />
+        <SectionTitle title="Mentions légales" level="h1" />
 
         <div className="space-y-8 prose prose-sm max-w-none">
           {[

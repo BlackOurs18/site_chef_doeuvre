@@ -20,6 +20,7 @@ export default function VeillePage() {
         <SectionTitle
           title="Veille professionnelle"
           subtitle="Analyse des tendances du marché, des pratiques UX et du branding dans l'univers parfum/cosmétiques, réalisée pendant le stage chez Amazonie Parfum."
+          level="h1"
         />
 
         {/* Objectif */}

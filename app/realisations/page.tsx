@@ -25,6 +25,7 @@ export default function RealisationsPage() {
         <SectionTitle
           title="Mes Projets"
           subtitle="Réalisations web, créations visuelles, optimisations SEO et projets réalisés en stage."
+          level="h1"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
