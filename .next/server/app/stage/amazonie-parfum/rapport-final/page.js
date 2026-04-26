@@ -1,0 +1,13 @@
+var R=require("../../../../chunks/ssr/[turbopack]_runtime.js")("server/app/stage/amazonie-parfum/rapport-final/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__04_5tqm._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_esm_build_templates_app-page_0__itjf.js")
+R.c("server/chunks/ssr/[root-of-the-server]__06kg3ad._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0zgvpt1._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__05m~g.2._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_0inhx6q._.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_0ghu-f7.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js")
+R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js")
+R.c("server/chunks/ssr/0zjb_server_app_stage_amazonie-parfum_rapport-final_page_actions_114isi1.js")
+R.m(91952)
+module.exports=R.m(91952).exports

@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/0w4g67.3gjw4x.js","/_next/static/chunks/08.l1x9-r0a9s.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+3:I[97367,["/_next/static/chunks/0w4g67.3gjw4x.js","/_next/static/chunks/08.l1x9-r0a9s.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Veille professionnelle — Amazonie Parfum | Shakurov Matin"}],["$","meta","1",{"name":"description","content":"Veille professionnelle réalisée dans le cadre du stage chez Amazonie Parfum — tendances e-commerce, UX et branding parfum"}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"3tCaBI4rwZuUm3dmrp6Tl"}

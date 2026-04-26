@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/contact/page": "/contact",
+  "/mentions-legales/page": "/mentions-legales",
+  "/page": "/",
+  "/profil/page": "/profil",
+  "/realisations/page": "/realisations",
+  "/stage/amazonie-parfum/page": "/stage/amazonie-parfum",
+  "/stage/amazonie-parfum/rapport-final/page": "/stage/amazonie-parfum/rapport-final",
+  "/stage/amazonie-parfum/rapport-lancement/page": "/stage/amazonie-parfum/rapport-lancement",
+  "/stage/amazonie-parfum/veille/page": "/stage/amazonie-parfum/veille",
+  "/stage/page": "/stage",
+  "/stage/rcf-en-berry/page": "/stage/rcf-en-berry"
+}

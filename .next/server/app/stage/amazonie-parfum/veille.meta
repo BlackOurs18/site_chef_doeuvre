@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/stage/layout,_N_T_/stage/amazonie-parfum/layout,_N_T_/stage/amazonie-parfum/veille/layout,_N_T_/stage/amazonie-parfum/veille/page,_N_T_/stage/amazonie-parfum/veille"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/stage/amazonie-parfum/veille/__PAGE__",
+    "/stage/amazonie-parfum/veille",
+    "/stage/amazonie-parfum",
+    "/stage",
+    "/_index",
+    "/_head"
+  ]
+}
