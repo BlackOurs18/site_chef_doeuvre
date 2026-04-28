@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(cp webfetch-1777387795416-n6utpg.bin design.gz)",
+      "Bash(gunzip -f design.gz)",
+      "Bash(tar -xf design)",
+      "Bash(mv \"Creative Visual Portfolio – Graphic, Photography & Video Design by Randy Fahmi.jfif\" assets/images/)",
+      "Bash(mv \"Exploration for Framer template.jfif\" assets/images/)",
+      "Bash(mv \"hero idea 1.png\" assets/images/)",
+      "Bash(mv \"Landing Page Design Inspiration 2026 _ Clean & Modern UI.jfif\" assets/images/)",
+      "Bash(mv \"Website style idea.jpg\" assets/images/)",
+      "Bash(gh pr *)"
+    ]
+  }
+}
