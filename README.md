@@ -60,3 +60,13 @@ git add .                   # 3. stage
 git commit -m "add feature" # 4. commit
 git push -u origin my-feature # 5. push
 ```
+
+---
+
+## Plugins & Skills
+
+- [Superpowers](https://github.com/obra/superpowers)
+- [Taste Skill](https://github.com/leonxlnx/taste-skill)
+- [Impeccable](https://github.com/pbakaus/impeccable)
+- [Caveman](https://github.com/juliusbrussee/caveman)
+- [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
