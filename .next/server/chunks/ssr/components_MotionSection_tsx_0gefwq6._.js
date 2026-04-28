@@ -1,3 +1,0 @@
-module.exports=[78255,a=>{"use strict";var b=a.i(87924),c=a.i(46271),d=a.i(1609),e=a.i(67126),f=a.i(72131);a.s(["default",0,function({children:a,className:g="",delay:h=0}){let i=function(){d.hasReducedMotionListener.current||(0,e.initPrefersReducedMotion)();let[a]=(0,f.useState)(d.prefersReducedMotion.current);return a}();return(0,b.jsx)(c.motion.div,{initial:{opacity:0,y:20*!i},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-50px"},transition:{duration:.5,delay:h},className:g,children:a})}],78255)}];
-
-//# sourceMappingURL=components_MotionSection_tsx_0gefwq6._.js.map
