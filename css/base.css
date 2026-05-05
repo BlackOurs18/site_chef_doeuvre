@@ -20,7 +20,7 @@
   --energy-mq: 28s;
   --energy-rise: 1s;
   --energy-sweep: .55s;
-  --energy-cursor-lerp: .18;
+  --energy-cursor-lerp: .8;
   --energy-cursor-lg: 64px;
   --energy-spin: 18s;
   --energy-reveal: .9s;

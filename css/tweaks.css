@@ -271,7 +271,7 @@
   --energy-mq: 80s;
   --energy-rise: 1.6s;
   --energy-sweep: 2s;
-  --energy-cursor-lerp: .13;
+  --energy-cursor-lerp: .35;
   --energy-cursor-lg: 48px;
   --energy-spin: 60s;
   --energy-reveal: 1.4s;
@@ -281,7 +281,7 @@
   --energy-mq: 28s;
   --energy-rise: 1s;
   --energy-sweep: .55s;
-  --energy-cursor-lerp: .18;
+  --energy-cursor-lerp: .8;
   --energy-cursor-lg: 64px;
   --energy-spin: 18s;
   --energy-reveal: .9s;
@@ -291,7 +291,7 @@
   --energy-mq: 8s;
   --energy-rise: .45s;
   --energy-sweep: .22s;
-  --energy-cursor-lerp: .42;
+  --energy-cursor-lerp: .7;
   --energy-cursor-lg: 96px;
   --energy-spin: 5s;
   --energy-reveal: .5s;

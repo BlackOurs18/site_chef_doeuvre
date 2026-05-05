@@ -6,12 +6,11 @@
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background: var(--paper);
+  background: #0E0E0C;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform .15s ease, width .25s ease, height .25s ease, background .25s ease, mix-blend-mode .25s ease;
-  mix-blend-mode: difference;
+  transition: width .25s ease, height .25s ease, background .25s ease;
 }
 
 .cur.cur--lg {
@@ -196,14 +195,18 @@
   inset: 0;
   background: var(--paper);
   transform: scaleX(0);
-  transform-origin: right;
+  transform-origin: left;
   transition: transform var(--energy-sweep) cubic-bezier(0.45, 0, 0.55, 1);
   z-index: 0;
 }
 
-.miss__row:hover::after {
+.miss__row.is-active::after {
   transform: scaleX(1);
-  transform-origin: left
+}
+
+.miss__row.is-leaving::after {
+  transform: scaleX(0);
+  transition: transform var(--energy-sweep) cubic-bezier(0.45, 0, 0.55, 1) 0.5s;
 }
 
 .miss__row>* {
@@ -212,8 +215,12 @@
   transition: color .3s ease .15s
 }
 
-.miss__row:hover>* {
+.miss__row.is-active>* {
   color: var(--bg)
+}
+
+.miss__row.is-leaving>* {
+  transition: color .3s ease .5s
 }
 
 .miss__num {
@@ -243,7 +250,7 @@
   transition: transform .3s ease, border-color .3s ease;
 }
 
-.miss__row:hover .miss__arrow {
+.miss__row.is-active .miss__arrow {
   transform: rotate(-45deg);
   border-color: var(--bg)
 }

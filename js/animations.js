@@ -4,17 +4,23 @@ const obs = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Skill bars
+// Skill bars — reset on exit, animate on enter from any direction
 const skillsRoot = document.getElementById('skills');
-const sObs = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) {
-    skillsRoot.querySelectorAll('.skill__bar-fill').forEach((f, i) => {
-      setTimeout(() => f.style.width = f.dataset.val + '%', i * 80);
-    });
-    sObs.disconnect();
-  }
-}), { threshold: 0.25 });
-if (skillsRoot) sObs.observe(skillsRoot);
+if (skillsRoot) {
+  const fills = skillsRoot.querySelectorAll('.skill__bar-fill');
+  let timers = [];
+  new IntersectionObserver(es => es.forEach(e => {
+    timers.forEach(clearTimeout);
+    timers = [];
+    if (e.isIntersecting) {
+      fills.forEach((f, i) => {
+        timers.push(setTimeout(() => f.style.width = f.dataset.val + '%', i * 80));
+      });
+    } else {
+      fills.forEach(f => f.style.width = '0');
+    }
+  }), { threshold: 0.25 }).observe(skillsRoot);
+}
 
 // Philosophy word-by-word scroll reveal
 const philo = document.getElementById('philo');
@@ -24,7 +30,7 @@ if (philo) {
     const r = philo.getBoundingClientRect();
     const winH = window.innerHeight;
     const start = winH * 0.95;
-    const end = -winH * 0.5;
+    const end = winH * 0.4;
     const progress = Math.min(1, Math.max(0, (start - r.top) / (start - end)));
     const lit = Math.floor(progress * words.length);
     words.forEach((w, i) => w.classList.toggle('lit', i < lit));
@@ -32,6 +38,22 @@ if (philo) {
   window.addEventListener('scroll', lightWords, { passive: true });
   lightWords();
 }
+
+// Missions hover — 0.5s hold before reverse
+document.querySelectorAll('.miss__row').forEach(row => {
+  let leaveTimer = null;
+  row.addEventListener('mouseenter', () => {
+    clearTimeout(leaveTimer);
+    row.classList.remove('is-leaving');
+    row.classList.add('is-active');
+  });
+  row.addEventListener('mouseleave', () => {
+    clearTimeout(leaveTimer);
+    row.classList.remove('is-active');
+    row.classList.add('is-leaving');
+    leaveTimer = setTimeout(() => row.classList.remove('is-leaving'), 1100);
+  });
+});
 
 // Live clock
 const clock = document.getElementById('clock');
