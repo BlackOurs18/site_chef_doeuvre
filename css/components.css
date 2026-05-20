@@ -484,3 +484,75 @@
   background: var(--accent);
   color: var(--bg)
 }
+
+/* MISSION DETAIL (pages catégories) */
+.mission-list {
+  border-top: 1px solid var(--line);
+}
+
+.mission-detail {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+  max-width: 860px;
+}
+
+.mission-detail__header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.mission-detail__num {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
+.mission-detail__title {
+  font-family: var(--f-disp);
+  font-style: var(--f-disp-style);
+  font-weight: var(--f-disp-weight);
+  font-size: clamp(24px, 3vw, 40px);
+  letter-spacing: var(--f-disp-tracking);
+  line-height: 1.1;
+}
+
+.mission-detail__desc {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.mission-detail__process {
+  background: var(--bg-2);
+  border-left: 2px solid var(--accent);
+  padding: 20px 24px;
+  border-radius: 0 4px 4px 0;
+}
+
+.mission-detail__process-lbl {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mission-detail__process p {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .mission-detail {
+    padding: 36px 0;
+  }
+}
