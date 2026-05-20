@@ -10,7 +10,27 @@
       "Bash(mv \"hero idea 1.png\" assets/images/)",
       "Bash(mv \"Landing Page Design Inspiration 2026 _ Clean & Modern UI.jfif\" assets/images/)",
       "Bash(mv \"Website style idea.jpg\" assets/images/)",
-      "Bash(gh pr *)"
+      "Bash(gh pr *)",
+      "Skill(superpowers:brainstorming)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'docs: add missions restructuration design spec *)",
+      "Skill(superpowers:writing-plans)",
+      "Bash(git commit -m 'docs: add missions restructuration implementation plan *)",
+      "Skill(superpowers:subagent-driven-development)",
+      "Bash(git commit -m 'feat: add mission-detail CSS component for category pages *)",
+      "Bash(git commit -m 'fix: add mobile responsive styles for mission-detail + pre-existing semicolon *)",
+      "Bash(git commit -m 'feat: restructure missions section — 5 categories with links *)",
+      "Bash(git commit -m 'feat: add analyse-strategie mission page *)",
+      "Bash(git commit -m 'feat: add direction-artistique mission page *)",
+      "Bash(git commit -m 'feat: add refonte-web mission page *)",
+      "Bash(git commit -m 'feat: add catalogue-produits mission page *)",
+      "Bash(git commit -m 'feat: add contenus-reseaux mission page *)",
+      "Bash(grep -E '#[0-9A-Fa-f]{3,6}|rgb\\\\\\(')",
+      "Bash(read var *)",
+      "Bash(git push *)",
+      "WebFetch(domain:blackours18.github.io)",
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
