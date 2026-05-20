@@ -482,7 +482,7 @@
 
 .rap__cta:hover {
   background: var(--accent);
-  color: var(--bg)
+  color: var(--bg);
 }
 
 /* MISSION DETAIL (pages catégories) */
@@ -554,5 +554,14 @@
 @media (max-width: 640px) {
   .mission-detail {
     padding: 36px 0;
+  }
+
+  .mission-detail__header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mission-detail__process {
+    padding: 16px 18px;
   }
 }
