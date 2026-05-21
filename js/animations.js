@@ -79,6 +79,17 @@ document.querySelectorAll('.miss__row').forEach(row => {
   });
 });
 
+// Back to top button
+const btt = document.getElementById('btt');
+if (btt) {
+  window.addEventListener('scroll', function () {
+    btt.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+  btt.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Live clock
 const clock = document.getElementById('clock');
 function updateClock() {

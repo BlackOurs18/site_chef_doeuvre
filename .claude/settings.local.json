@@ -30,7 +30,9 @@
       "Bash(git push *)",
       "WebFetch(domain:blackours18.github.io)",
       "Bash(gh api *)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(git commit -m 'feat: hide header on scroll down, show on scroll up *)",
+      "Bash(git commit -m 'feat: add back-to-top fixed square button *)"
     ]
   }
 }
