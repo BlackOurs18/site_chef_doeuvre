@@ -79,6 +79,16 @@ document.querySelectorAll('.miss__row').forEach(row => {
   });
 });
 
+// Active nav link in dropdown
+(function () {
+  const current = window.location.pathname.split('/').pop();
+  if (!current) return;
+  document.querySelectorAll('.nav__drop a').forEach(a => {
+    const href = a.getAttribute('href').split('/').pop();
+    if (href === current) a.classList.add('is-active');
+  });
+})();
+
 // Back to top button
 const btt = document.getElementById('btt');
 if (btt) {

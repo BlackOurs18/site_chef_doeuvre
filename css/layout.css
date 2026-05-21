@@ -153,6 +153,17 @@
   color: var(--bg);
 }
 
+.nav__drop a.is-active {
+  color: var(--accent);
+}
+
+.nav__drop a.is-active::before {
+  content: "●";
+  font-size: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 /* HERO */
 .hero {
   min-height: 100vh;
