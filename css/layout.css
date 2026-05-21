@@ -9,13 +9,29 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 28px;
-  mix-blend-mode: normal;
-  background: var(--bg);
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-  backdrop-filter: blur(18px) saturate(160%);
   transform: translateY(0);
   transition: transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.hdr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) 88%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 50%, transparent) 45%,
+    transparent 100%
+  );
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-mask-image: linear-gradient(to bottom, black 35%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 35%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hdr--hidden {
