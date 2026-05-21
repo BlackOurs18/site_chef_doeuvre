@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 28px;
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  background: var(--bg);
   transform: translateY(0);
   transition: transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
 }
