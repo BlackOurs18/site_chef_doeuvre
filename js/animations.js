@@ -54,7 +54,7 @@ if (philo) {
     const r = philo.getBoundingClientRect();
     const winH = window.innerHeight;
     const start = winH * 0.95;
-    const end = winH * 0.4;
+    const end = winH * -0.2;
     const progress = Math.min(1, Math.max(0, (start - r.top) / (start - end)));
     const lit = Math.floor(progress * words.length);
     words.forEach((w, i) => w.classList.toggle('lit', i < lit));
