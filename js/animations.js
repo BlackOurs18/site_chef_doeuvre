@@ -1,3 +1,27 @@
+// Hide header on scroll down, show on scroll up
+(function () {
+  const hdr = document.querySelector('.hdr');
+  if (!hdr) return;
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        const y = window.scrollY;
+        if (y > lastY && y > 80) {
+          hdr.classList.add('hdr--hidden');
+        } else {
+          hdr.classList.remove('hdr--hidden');
+        }
+        lastY = y;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+
 // Scroll reveal
 const obs = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }

@@ -10,6 +10,12 @@
   justify-content: space-between;
   padding: 22px 28px;
   mix-blend-mode: difference;
+  transform: translateY(0);
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.hdr--hidden {
+  transform: translateY(-110%);
 }
 
 .brand {
