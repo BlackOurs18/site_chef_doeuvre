@@ -1,29 +1,32 @@
 :root {
-  --bg: #0E0E0C;
-  --bg-2: #181815;
-  --paper: #F4F1EA;
-  --text: #F4F1EA;
-  --text-2: rgba(244, 241, 234, 0.6);
-  --text-3: rgba(244, 241, 234, 0.35);
-  --accent: #FF5B1F;
-  --accent-2: #FFD66B;
-  --line: rgba(244, 241, 234, 0.12);
+  /* Mood : paper */
+  --bg: #F4F1EA;
+  --bg-2: #EDE9DE;
+  --paper: #0E0E0C;
+  --text: #0E0E0C;
+  --text-2: rgba(14, 14, 12, 0.6);
+  --text-3: rgba(14, 14, 12, 0.4);
+  --accent: #0E0E0C;
+  --accent-2: #FF5B1F;
+  --line: rgba(14, 14, 12, 0.12);
 
-  --f-disp: "Instrument Serif", "Times New Roman", serif;
-  --f-disp-style: italic;
-  --f-disp-weight: 400;
-  --f-disp-tracking: -0.02em;
+  /* Voice : sans */
+  --f-disp: "Space Grotesk", "Inter", sans-serif;
+  --f-disp-style: normal;
+  --f-disp-weight: 500;
+  --f-disp-tracking: -0.04em;
   --f-body: "Inter", system-ui, sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, monospace;
   --maxw: 1320px;
 
-  --energy-mq: 28s;
-  --energy-rise: 1s;
-  --energy-sweep: .55s;
-  --energy-cursor-lerp: .8;
-  --energy-cursor-lg: 64px;
-  --energy-spin: 18s;
-  --energy-reveal: .9s;
+  /* Energy : hushed */
+  --energy-mq: 80s;
+  --energy-rise: 1.6s;
+  --energy-sweep: 2s;
+  --energy-cursor-lerp: .35;
+  --energy-cursor-lg: 48px;
+  --energy-spin: 60s;
+  --energy-reveal: 1.4s;
 }
 
 .disp {
