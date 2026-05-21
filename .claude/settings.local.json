@@ -32,7 +32,15 @@
       "Bash(gh api *)",
       "WebFetch(domain:github.com)",
       "Bash(git commit -m 'feat: hide header on scroll down, show on scroll up *)",
-      "Bash(git commit -m 'feat: add back-to-top fixed square button *)"
+      "Bash(git commit -m 'feat: add back-to-top fixed square button *)",
+      "Bash(git commit -m 'fix: slow down philosophy text animation end point *)",
+      "Bash(git commit -m 'fix: adjust philosophy animation end point to 0.15 *)",
+      "Bash(git commit -m 'feat: add background to header when scrolled past top *)",
+      "Bash(git commit -m 'feat: remove #real section *)",
+      "Bash(git commit -m 'feat: add missing required page elements *)",
+      "Bash(git commit -m 'fix: prevent black flash when header background fades out *)",
+      "Bash(git commit -m 'feat: frosted glass header always active *)",
+      "Bash(git commit -m 'feat: add missions dropdown in nav \\(all pages\\) *)"
     ]
   }
 }
