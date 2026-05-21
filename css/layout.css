@@ -12,7 +12,6 @@
   mix-blend-mode: normal;
   background: var(--bg);
   background: color-mix(in srgb, var(--bg) 72%, transparent);
-  border-bottom: 1px solid var(--line);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   backdrop-filter: blur(18px) saturate(160%);
   transform: translateY(0);
@@ -38,7 +37,7 @@
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #fff
+  color: var(--text)
 }
 
 .nav {
@@ -51,7 +50,7 @@
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text);
   position: relative
 }
 
@@ -62,7 +61,7 @@
   right: 0;
   bottom: -4px;
   height: 1px;
-  background: #fff;
+  background: var(--text);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .35s cubic-bezier(.7, 0, .3, 1)
@@ -76,7 +75,7 @@
   font-family: var(--f-mono);
   font-size: 11px;
   letter-spacing: 0.12em;
-  color: #fff
+  color: var(--text)
 }
 
 /* NAV DROPDOWN */
