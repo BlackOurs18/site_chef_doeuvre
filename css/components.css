@@ -79,7 +79,7 @@
 
 .cta-circle__ring {
   position: absolute;
-  inset: -6px;
+  inset: -22px;
   animation: spin var(--energy-spin) linear infinite
 }
 
