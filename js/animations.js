@@ -14,18 +14,6 @@
         } else {
           hdr.classList.remove('hdr--hidden');
         }
-        if (y > 80) {
-          hdr.classList.add('hdr--scrolled');
-          hdr.classList.remove('hdr--fading');
-          if (hdr._fadingTimer) { clearTimeout(hdr._fadingTimer); hdr._fadingTimer = null; }
-        } else if (hdr.classList.contains('hdr--scrolled')) {
-          hdr.classList.remove('hdr--scrolled');
-          hdr.classList.add('hdr--fading');
-          hdr._fadingTimer = setTimeout(() => {
-            hdr.classList.remove('hdr--fading');
-            hdr._fadingTimer = null;
-          }, 420);
-        }
         lastY = y;
         ticking = false;
       });
