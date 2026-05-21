@@ -14,6 +14,7 @@
         } else {
           hdr.classList.remove('hdr--hidden');
         }
+        hdr.classList.toggle('hdr--scrolled', y > 80);
         lastY = y;
         ticking = false;
       });

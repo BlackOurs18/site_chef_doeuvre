@@ -11,11 +11,31 @@
   padding: 22px 28px;
   mix-blend-mode: difference;
   transform: translateY(0);
-  transition: transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.3, 1),
+              background 0.35s ease,
+              border-color 0.35s ease;
 }
 
 .hdr--hidden {
   transform: translateY(-110%);
+}
+
+.hdr--scrolled {
+  mix-blend-mode: normal;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.hdr--scrolled .brand,
+.hdr--scrolled .nav a,
+.hdr--scrolled .hdr__time {
+  color: var(--text);
+}
+
+.hdr--scrolled .nav a::after {
+  background: var(--text);
 }
 
 .brand {
