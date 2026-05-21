@@ -28,13 +28,21 @@
   backdrop-filter: blur(16px);
 }
 
+.hdr--fading {
+  mix-blend-mode: normal;
+}
+
 .hdr--scrolled .brand,
 .hdr--scrolled .nav a,
-.hdr--scrolled .hdr__time {
+.hdr--scrolled .hdr__time,
+.hdr--fading .brand,
+.hdr--fading .nav a,
+.hdr--fading .hdr__time {
   color: var(--text);
 }
 
-.hdr--scrolled .nav a::after {
+.hdr--scrolled .nav a::after,
+.hdr--fading .nav a::after {
   background: var(--text);
 }
 
