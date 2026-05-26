@@ -436,7 +436,7 @@
   font-family: var(--f-mono);
   font-size: 11px;
   letter-spacing: 0.14em;
-  color: var(--accent);
+  color: var(--accent-2);
   text-transform: uppercase;
   margin-bottom: 16px
 }
@@ -453,12 +453,12 @@
 
 .rap__title em {
   font-style: var(--f-disp-style);
-  color: var(--accent)
+  color: var(--accent-2)
 }
 
 .rap__desc {
   font-size: 14px;
-  color: rgba(14, 14, 12, 0.6);
+  color: rgba(244, 241, 234, 0.55);
   margin: 0 0 32px;
   flex-grow: 1;
   line-height: 1.55

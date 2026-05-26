@@ -46,7 +46,9 @@
       "Bash(git commit -m 'fix: header text color + remove border-bottom *)",
       "Bash(git commit -m 'refactor: bake paper/sans/hushed as permanent style *)",
       "Bash(git commit -m 'feat: gradient blur header \\(strong top, fades to none\\) *)",
-      "Bash(git commit -m 'refactor: simple semi-transparent background on header, no blur *)"
+      "Bash(git commit -m 'refactor: simple semi-transparent background on header, no blur *)",
+      "Bash(git commit -m 'feat: rapport pages + Rapports dropdown nav *)",
+      "Bash(git commit -m 'fix: rapport cards fully clickable, fix dark-on-dark colors *)"
     ]
   }
 }
