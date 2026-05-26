@@ -24,3 +24,9 @@ document.querySelectorAll('[data-cursor="lg"]').forEach(el => {
   });
   el.addEventListener('mouseleave', () => cur.classList.remove('cur--lg'));
 });
+
+// Inversion curseur sur fonds sombres (cards rapports, cta-circle, missions actives)
+document.querySelectorAll('.rap, .cta-circle, .miss__row').forEach(el => {
+  el.addEventListener('mouseenter', () => cur.classList.add('cur--inv'));
+  el.addEventListener('mouseleave', () => cur.classList.remove('cur--inv'));
+});

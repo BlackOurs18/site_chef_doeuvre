@@ -6,17 +6,22 @@
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background: #fff;
-  mix-blend-mode: difference;
+  background: #0E0E0C;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width .25s ease, height .25s ease;
+  transition: width .25s ease, height .25s ease, background .25s ease;
 }
 
 .cur.cur--lg {
   width: var(--energy-cursor-lg);
   height: var(--energy-cursor-lg);
+  background: #0E0E0C;
+}
+
+/* Curseur sur fond sombre → devient clair */
+.cur.cur--inv {
+  background: #F4F1EA;
 }
 
 .cur__lbl {
@@ -29,9 +34,13 @@
   font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #000;
+  color: #F4F1EA;
   opacity: 0;
   transition: opacity .2s ease;
+}
+
+.cur.cur--inv .cur__lbl {
+  color: #0E0E0C;
 }
 
 .cur.cur--lg .cur__lbl {
