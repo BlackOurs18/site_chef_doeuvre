@@ -40,7 +40,13 @@
       "Bash(git commit -m 'feat: add missing required page elements *)",
       "Bash(git commit -m 'fix: prevent black flash when header background fades out *)",
       "Bash(git commit -m 'feat: frosted glass header always active *)",
-      "Bash(git commit -m 'feat: add missions dropdown in nav \\(all pages\\) *)"
+      "Bash(git commit -m 'feat: add missions dropdown in nav \\(all pages\\) *)",
+      "Bash(git commit -m 'feat: highlight active mission in nav dropdown *)",
+      "Bash(git commit -m 'fix: dropdown hover gap with bridge pseudo-element *)",
+      "Bash(git commit -m 'fix: header text color + remove border-bottom *)",
+      "Bash(git commit -m 'refactor: bake paper/sans/hushed as permanent style *)",
+      "Bash(git commit -m 'feat: gradient blur header \\(strong top, fades to none\\) *)",
+      "Bash(git commit -m 'refactor: simple semi-transparent background on header, no blur *)"
     ]
   }
 }

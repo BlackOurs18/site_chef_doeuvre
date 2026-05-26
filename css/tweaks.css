@@ -106,3 +106,19 @@
     gap: 10px
   }
 }
+
+/* RAPPORT RESPONSIVE */
+@media (max-width: 1024px) {
+  .rpt-axes { grid-template-columns: 1fr 1fr; }
+  .rpt-stats { grid-template-columns: repeat(2, 1fr); }
+  .rpt-deliv-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .rpt-axes { grid-template-columns: 1fr; }
+  .rpt-stats { grid-template-columns: 1fr 1fr; }
+  .rpt-deliv-grid { grid-template-columns: 1fr; }
+  .rpt-highlight { padding: 20px 20px; }
+  .rpt-soon { padding: 40px 24px; }
+  .rpt-sub-title { font-size: 24px; }
+}
