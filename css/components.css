@@ -6,18 +6,17 @@
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background: #0E0E0C;
+  background: #fff;
+  mix-blend-mode: difference;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width .25s ease, height .25s ease, background .25s ease;
+  transition: width .25s ease, height .25s ease;
 }
 
 .cur.cur--lg {
   width: var(--energy-cursor-lg);
   height: var(--energy-cursor-lg);
-  background: var(--accent);
-  mix-blend-mode: normal
 }
 
 .cur__lbl {
@@ -30,7 +29,7 @@
   font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #0E0E0C;
+  color: #000;
   opacity: 0;
   transition: opacity .2s ease;
 }
