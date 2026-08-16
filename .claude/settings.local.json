@@ -48,7 +48,9 @@
       "Bash(git commit -m 'feat: gradient blur header \\(strong top, fades to none\\) *)",
       "Bash(git commit -m 'refactor: simple semi-transparent background on header, no blur *)",
       "Bash(git commit -m 'feat: rapport pages + Rapports dropdown nav *)",
-      "Bash(git commit -m 'fix: rapport cards fully clickable, fix dark-on-dark colors *)"
+      "Bash(git commit -m 'fix: rapport cards fully clickable, fix dark-on-dark colors *)",
+      "Bash(git commit -m 'fix: cursor mix-blend-mode difference — visible on all backgrounds *)",
+      "Bash(git commit -m 'fix: cursor opaque color inversion on dark backgrounds *)"
     ]
   }
 }
