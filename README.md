@@ -1,84 +1,51 @@
-# Git Quick Reference
+# Site Chef-d'œuvre — DEUST Webmaster & Métiers de l'Internet
+
+Chef-d'œuvre de fin d'année, réalisé dans le cadre du **DEUST Webmaster & Métiers de l'Internet** (promotion 2025–2026).
+
+**Auteur :** Matin Shakurov
+
+**Publication :** [https://blackours18.github.io/site_chef_doeuvre/](https://blackours18.github.io/site_chef_doeuvre/)
 
 ---
 
-## Clone
+## Contexte
 
-Copy a remote repo to your machine. Run once to get the project locally.
+Ce site présente le stage de webmaster effectué chez **Amazonie Parfum**, parfumerie indépendante à Bourges, du **30 mars au 5 juin 2026**. Il détaille le contexte de l'entreprise, les missions confiées, ainsi que le rapport de lancement et le rapport final du stage.
 
-```bash
-git clone <url>
-git clone <url> <folder-name>
+---
+
+## Structure des dossiers
+
+```
+.
+├── index.html          # page d'accueil
+├── missions/           # 5 pages détaillant les missions du stage
+├── rapports/           # rapport de lancement + rapport final
+├── css/                # base, layout, components, tweaks
+├── js/                 # animations, cursor, tweaks
+├── assets/             # images, médias
+└── docs/               # documentation de conception et mémo Git
 ```
 
 ---
 
-## Pull
+## Choix techniques
 
-Fetch latest changes from remote and merge into your current branch. Run before starting work to stay up to date.
+Le site est développé en **HTML/CSS/JS natif**, sans framework ni dépendance de build, et publié sur **GitHub Pages**.
 
-```bash
-git pull
-git pull origin <branch>
-```
+Une première version avait été construite en **Next.js** (25–26 avril 2026), puis abandonnée le **28 avril 2026** au profit de cette reconstruction native. Cette décision fait suite à une veille comparative menée sur 9 CMS/frameworks, qui a conclu que le choix d'une technologie doit partir du besoin métier réel et non de la popularité de l'outil : un site vitrine statique, sans contenu dynamique ni authentification, ne justifie pas une chaîne de build.
 
----
-
-## Add & Commit
-
-`add` stages files (marks them ready to save). `commit` saves a snapshot of staged files with a message describing what changed.
-
-```bash
-git add .              # stage all changed files
-git add <file>         # stage one file
-
-git commit -m "message"
-git commit -am "message"   # add tracked files + commit in one shot
-```
+Certaines évolutions du site (par exemple la restructuration de la section Missions, mi-mai 2026) ont suivi une méthode de **développement piloté par spécification** : les documents de conception sont versionnés dans [`docs/superpowers/`](docs/superpowers/) avant toute ligne de code.
 
 ---
 
-## Push
+## Consultation en local
 
-Send your local commits to the remote repo so others (or GitHub) can see them.
-
-```bash
-git push
-git push origin <branch>
-git push -u origin <branch>   # set upstream (use on first push of a new branch)
-```
+Aucun serveur ni build n'est nécessaire. Il suffit d'ouvrir `index.html` dans un navigateur.
 
 ---
 
-## Status & Log
+## Documentation
 
-Check what's changed or see commit history.
-
-```bash
-git status          # shows staged, unstaged, untracked files
-git log --oneline   # compact commit history
-```
-
----
-
-## Typical workflow
-
-```
-git pull                    # 1. get latest
-git checkout -b my-feature  # 2. new branch
-# ... make changes ...
-git add .                   # 3. stage
-git commit -m "add feature" # 4. commit
-git push -u origin my-feature # 5. push
-```
-
----
-
-## Plugins & Skills
-
-- [Superpowers](https://github.com/obra/superpowers)
-- [Taste Skill](https://github.com/leonxlnx/taste-skill)
-- [Impeccable](https://github.com/pbakaus/impeccable)
-- [Caveman](https://github.com/juliusbrussee/caveman)
-- [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
-- [Claude SEO](https://github.com/AgriciDaniel/claude-seo)
+- [`docs/superpowers/`](docs/superpowers/) — spécifications et plans de conception
+- [`docs/git-memo.md`](docs/git-memo.md) — aide-mémoire des commandes Git
