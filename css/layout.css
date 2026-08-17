@@ -444,7 +444,7 @@ footer {
   font-family: var(--f-disp);
   font-style: var(--f-disp-style);
   font-weight: var(--f-disp-weight);
-  font-size: clamp(64px, 12vw, 160px);
+  font-size: clamp(40px, 12vw, 160px);
   line-height: 1;
   letter-spacing: var(--f-disp-tracking);
   margin-bottom: 48px;
