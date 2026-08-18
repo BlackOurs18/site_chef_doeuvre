@@ -1091,3 +1091,144 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+/* ═══════════════════════════════════════
+   REPORT SECTION NAV — sticky strip
+   ═══════════════════════════════════════ */
+
+.rptnav {
+  position: fixed;
+  top: var(--hdr-h, 62px);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease,
+              transform 0.45s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.rptnav.is-on {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.rptnav.is-on.rptnav--up {
+  transform: translateY(calc(-1 * var(--hdr-h, 62px)));
+}
+
+.rptnav__scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rptnav__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.rptnav__inner {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  padding: 0 16px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.rptnav__link {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 11px 12px 10px;
+  white-space: nowrap;
+  color: var(--text-3);
+  transition: color 0.25s ease;
+}
+
+.rptnav__link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent-2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.rptnav__num {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.rptnav__lbl {
+  font-family: var(--f-disp);
+  font-weight: var(--f-disp-weight);
+  letter-spacing: var(--f-disp-tracking);
+  font-size: 14px;
+}
+
+.rptnav__link:hover {
+  color: var(--text);
+}
+
+.rptnav__link.is-current {
+  color: var(--text);
+}
+
+.rptnav__link.is-current::after {
+  transform: scaleX(1);
+}
+
+.rptnav__link.is-current .rptnav__num {
+  color: var(--accent-2);
+}
+
+/* Read progress */
+.rptnav__prog {
+  height: 2px;
+  background: transparent;
+}
+
+.rptnav__prog span {
+  display: block;
+  height: 100%;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.15s linear;
+}
+
+@media (max-width: 900px) {
+  .rptnav__inner {
+    padding: 0 8px;
+  }
+
+  .rptnav__link {
+    padding: 10px 10px 9px;
+  }
+
+  .rptnav__lbl {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rptnav,
+  .rptnav__link::after,
+  .rptnav__prog span {
+    transition: none;
+  }
+}
