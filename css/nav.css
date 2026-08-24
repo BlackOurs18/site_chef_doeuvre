@@ -1,0 +1,314 @@
+/* ═══════════════════════════════════════
+   MOBILE NAV — burger + full-screen drawer
+   ═══════════════════════════════════════ */
+
+/* Anchors land below the fixed header instead of underneath it */
+:target,
+main section[id],
+main [id] {
+  scroll-margin-top: calc(var(--hdr-h, 62px) + 20px);
+}
+
+/* ── Burger ── */
+.burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: -10px -10px -10px 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.burger__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+}
+
+.burger__box span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.7, 0, 0.3, 1),
+              opacity 0.2s ease;
+}
+
+.burger__box span:nth-child(1) { top: 0; }
+.burger__box span:nth-child(2) { top: 50%; margin-top: -0.75px; }
+.burger__box span:nth-child(3) { bottom: 0; }
+
+.burger.is-open .burger__box span:nth-child(1) {
+  transform: translateY(6.25px) rotate(45deg);
+}
+
+.burger.is-open .burger__box span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.2);
+}
+
+.burger.is-open .burger__box span:nth-child(3) {
+  transform: translateY(-6.25px) rotate(-45deg);
+}
+
+/* ── Drawer ── */
+.mnav {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--bg);
+  padding-top: var(--hdr-h, 62px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(6%);
+  transition: opacity 0.3s ease,
+              transform 0.4s cubic-bezier(0.7, 0, 0.3, 1),
+              visibility 0s linear 0.4s;
+}
+
+.mnav.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: opacity 0.3s ease,
+              transform 0.4s cubic-bezier(0.7, 0, 0.3, 1),
+              visibility 0s;
+}
+
+.mnav__inner {
+  padding: 24px 22px calc(48px + env(safe-area-inset-bottom, 0px));
+  max-width: 620px;
+}
+
+.mnav__group + .mnav__group {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.mnav__grouptitle {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 6px;
+}
+
+.mnav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mnav__list > li:last-child > a,
+.mnav__list > li:last-child.mnav__cap {
+  border-bottom: none;
+}
+
+.mnav__cap {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding: 22px 4px 8px;
+}
+
+/* In-page section jumps */
+.mnav__sec {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 4px;
+  min-height: 48px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-2);
+  transition: color 0.2s ease, padding-left 0.25s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.mnav__num {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.mnav__lbl {
+  font-family: var(--f-disp);
+  font-weight: var(--f-disp-weight);
+  letter-spacing: var(--f-disp-tracking);
+  font-size: 22px;
+  line-height: 1.15;
+  flex: 1;
+}
+
+.mnav__hash {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  color: var(--text-3);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mnav__sec.is-current {
+  color: var(--text);
+  padding-left: 10px;
+}
+
+.mnav__sec.is-current .mnav__num {
+  color: var(--accent-2);
+}
+
+.mnav__sec.is-current .mnav__hash {
+  opacity: 1;
+  color: var(--accent-2);
+}
+
+/* Site pages */
+.mnav__page,
+.mnav__sub {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+.mnav__page {
+  font-family: var(--f-disp);
+  font-weight: var(--f-disp-weight);
+  letter-spacing: var(--f-disp-tracking);
+  font-size: 26px;
+  padding: 12px 4px;
+}
+
+.mnav__sub {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  padding: 12px 4px 12px 22px;
+  position: relative;
+}
+
+.mnav__sub::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background: var(--line);
+}
+
+.mnav__page[aria-current="page"],
+.mnav__sub[aria-current="page"] {
+  color: var(--accent-2);
+}
+
+.mnav__page[aria-current="page"]::after,
+.mnav__sub[aria-current="page"]::after {
+  content: "●";
+  font-size: 6px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Lock the page behind the drawer */
+html.nav-open,
+html.nav-open body {
+  overflow: hidden;
+}
+
+/* The report strip would otherwise float over the drawer */
+html.nav-open .rptnav,
+html.nav-open .btt {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── "#" permalink beside each main section label ── */
+.sec-hash {
+  font-family: var(--f-mono);
+  font-size: 0.85em;
+  color: var(--text-3);
+  opacity: 0;
+  margin-left: 2px;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.sec-eyebrow:hover .sec-hash,
+.sec-title:hover .sec-hash,
+.mission-detail__title:hover .sec-hash,
+.sec-hash:focus-visible {
+  opacity: 1;
+  color: var(--accent-2);
+}
+
+.mission-detail__title .sec-hash,
+.sec-title .sec-hash {
+  font-size: 0.4em;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Touch devices have no hover — keep the marker permanently visible but quiet */
+@media (hover: none) {
+  .sec-hash {
+    opacity: 0.55;
+  }
+}
+
+/* ── Breakpoint: burger replaces the desktop nav ── */
+@media (max-width: 1024px) {
+  .burger {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mnav {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mnav,
+  .burger__box span,
+  .mnav__sec {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* ── Focus visibility (the drawer is keyboard-reachable) ── */
+.burger:focus-visible,
+.mnav a:focus-visible,
+.rptnav__link:focus-visible,
+.nav a:focus-visible,
+.btt:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

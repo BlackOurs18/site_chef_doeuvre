@@ -21,8 +21,8 @@ Ce site présente le stage de webmaster effectué chez **Amazonie Parfum**, parf
 ├── index.html          # page d'accueil
 ├── missions/           # 5 pages détaillant les missions du stage
 ├── rapports/           # rapport de lancement + rapport final
-├── css/                # base, layout, components, tweaks
-├── js/                 # animations, cursor, tweaks
+├── css/                # base, layout, components, nav, tweaks
+├── js/                 # animations, cursor, nav, report-nav, tweaks
 ├── assets/             # images, médias
 └── docs/               # documentation de conception et mémo Git
 ```
